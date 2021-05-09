@@ -1,24 +1,37 @@
-import React from 'react';
 import './App.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers';
-// import new components
 import NewTimer from './components/NewTimer'
 import ListTimers from './components/ListTimers'
-import './App.css';
+import { update } from './actions'
+// import { loadState, saveState } from './utils'
+import throttle from 'lodash/throttle'
 
-const store = createStore(reducers);
+// const persistedState = loadState()
+// const store = createStore(reducers, persistedState)
+// store.subscribe(throttle(() => {
+//   saveState(store.getState())
+// }, 1000));
+
+const store = createStore(reducers); 
+
+let lastUpdateTime = Date.now()
+setInterval(() => {
+  const now = Date.now()
+  const deltaTime = now - lastUpdateTime
+  lastUpdateTime = now
+  store.dispatch(update(deltaTime))
+}, 50)
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>TMRZ</h1>
-        {/* Display the new components */}
+        <h1>Timers</h1>
         <NewTimer />
         <ListTimers />
-      </div>  
+      </div>
     </Provider>
   );
 }

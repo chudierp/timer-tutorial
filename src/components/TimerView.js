@@ -12,7 +12,9 @@ export default function TimerView(props) {
     <div className="TimerView">
       <h2>{timer.name}</h2>
       <h1>{formatTime(timer.time)}</h1>
-      <button onClick={() => dispatch(toggleTimer(index))}>
+      <button
+        onClick={() => dispatch(toggleTimer(index))}
+      >
         {timer.isRunning ? "Stop" : "Start"}
       </button>
     </div>
