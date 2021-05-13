@@ -1,6 +1,7 @@
 .NewTimer {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .NewTimer > input {

@@ -1,5 +1,5 @@
 // Import all of our actions
-import { NEW_TIMER, TOGGLE_TIMER, UPDATE } from '../actions';
+import { NEW_TIMER, TOGGLE_TIMER, UPDATE, DELETE } from '../actions';
 import Timer from '../Timer'
 
 const timersReducer = (state = [], action) => {
@@ -26,6 +26,9 @@ const timersReducer = (state = [], action) => {
         }
         return timer
       })
+
+    case DELETE:
+      return state.filter((timer, i) => i !== action.payload.index)
 
     default:
       return state;
