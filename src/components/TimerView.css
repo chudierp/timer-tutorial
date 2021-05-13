@@ -1,30 +1,36 @@
-.TimerView {
-	width: 320px;
+.timer-view {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
-}
-
-.TimerView > h1 {
-	flex:1; 
-	margin: 1rem;
-	text-align: left;
-	font-variant-numeric: tabular-nums;
-}
-
-.TimerView > h2 {
-	flex: 1;
-}
-
-.TimerView > button {
-	padding: 0.25rem 0.5rem;
-	margin: 0.5em;
-	border-radius: 0.5rem;
-	border: 1px solid #000;	
-	background-color: #000;
-	color: #fff;
-	font-size: 1rem;
+	align-items: stretch;
+	padding: 1em;
+  }
+  
+  .timer-view-name__h2 {
+	margin: 0;
+	font-size: 1.25em;
+  }
+  
+  .timer-view-time__h1 {
+	margin: 0;
+	font-size: 2em;
+  }
+  
+  .timer-view__button {
+	width: 78px;
+	display: block;
+	font-size: 1em;
 	font-weight: bold;
-	width: 4rem;
-}
+	border: 1px solid #000;
+	border-radius: 0.5em;
+  }
+  
+  .timer-view__button--start {
+	color: #000;
+	background-color: rgb(30, 135, 1);
+  }
+  
+  .timer-view__button--stop {
+	color: #fff;
+	background-color: rgb(225, 16, 16);
+  }
