@@ -5,10 +5,10 @@ This tutorial uses React and Redux to create a timer app.
 
 This app could be build as either React or React Native.
 
-##Version
+# Version
 Vesion: 1.0.0
 
-##Frameworks 
+# Frameworks 
 
 JavaScript: ES6
 React
