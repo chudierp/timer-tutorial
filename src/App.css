@@ -3,4 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(183, 214, 240);
+}
+
+.App h1 {
+  font-size: 300%;
+  font-family: OCR A Std, monospace;
+  margin: 0.5%;
+  
 }

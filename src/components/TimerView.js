@@ -13,16 +13,18 @@ export default function TimerView(props) {
   return (
     <div className="TimerView">
       <h2>{timer.name}</h2>
+      <h4>{timer.desc}</h4>
       <h1>{formatTime(timer.time)}</h1>
       <button className={`timer-view__button timer-view__button--${buttonClass}`}
-        onClick={() => dispatch(toggleTimer(index))}
-      >
+        onClick={() => dispatch(toggleTimer(index))}>
         {timer.isRunning ? "Stop" : "Start"}
       </button>
-      <button onClick={() => dispatch(deleteTimer(index))}>Delete</button>
+      <button className="delete" onClick={() => dispatch(deleteTimer(index))}>Delete</button>
     </div>
   )
 }
+
+
     
 
     

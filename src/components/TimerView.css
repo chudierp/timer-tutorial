@@ -1,36 +1,67 @@
-.timer-view {
+.TimerView {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: stretch;
-	padding: 1em;
+	flex-direction: column;
+	align-items: center;
+	width: 600px;
+	margin: 3px;
+	background-color: #71aaff;
   }
   
-  .timer-view-name__h2 {
+  .TimerView h2 {
 	margin: 0;
 	font-size: 1.25em;
+	font-size: 80px;
+	color:white;
+	border-radius: 0.5rem;
+	margin: 0px;
+	position: relative;
+	top: 50px;
+	font-family: OCR A Std, monospace;
   }
   
-  .timer-view-time__h1 {
+  .TimerView h1 {
 	margin: 0;
-	font-size: 2em;
+	font-variant-numeric: tabular-nums;
+	font-size: 100px;
+	border-radius: 20px;
+	padding: 20px;
+	color: white;
+	margin: 15px;
+	position: relative;
+	
+
   }
   
   .timer-view__button {
-	width: 78px;
-	display: block;
-	font-size: 1em;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.5rem;
+	font-size: 30px;
 	font-weight: bold;
-	border: 1px solid #000;
-	border-radius: 0.5em;
+	padding: 5px;
+	margin: 5px;
+	position: relative;
+	font-family: OCR A Std, monospace;
+  }
+
+  .TimerView .delete {
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.5rem;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 5px;
+	margin: 5px;
+	position: relative;
+	font-family: OCR A Std, monospace;
   }
   
   .timer-view__button--start {
 	color: #000;
-	background-color: rgb(30, 135, 1);
+	background-color: rgb(30, 135, 1);	
   }
   
   .timer-view__button--stop {
 	color: #fff;
 	background-color: rgb(225, 16, 16);
   }
+
+  

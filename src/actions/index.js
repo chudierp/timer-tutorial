@@ -4,10 +4,10 @@ export const SELECT_TIMER = 'SELECT_TIMER'
 export const UPDATE  = "UPDATE"
 export const DELETE = "DELETE"
 
-export const addTimer = (name) => {
+export const addTimer = (name, desc) => {
     return {
         type: NEW_TIMER, 
-        payload: { name }
+        payload: { name, desc}
     }
 }
 

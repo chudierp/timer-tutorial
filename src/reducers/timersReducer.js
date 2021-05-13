@@ -7,7 +7,9 @@ const timersReducer = (state = [], action) => {
     case NEW_TIMER:
       // Add a new timer, return a copy of state
       const name = action.payload.name ? action.payload.name : `Timer ${state.length}`
-      return [...state, new Timer(name)]
+      const desc = action.payload.desc ? action.payload.desc : `Timer ${state.length}`
+      return [...state, new Timer(name, desc)]
+
 
     case TOGGLE_TIMER:
       // Invert the isRunning property of timer at index, return a copy of state
